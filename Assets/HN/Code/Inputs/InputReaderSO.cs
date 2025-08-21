@@ -45,7 +45,8 @@ namespace HN.Code.Inputs
 
         public void OnJump(InputAction.CallbackContext context)
         {
-            OnJumpKeyPressed?.Invoke();
+            if(context.performed)
+                OnJumpKeyPressed?.Invoke();
         }
 
         public void OnMousePos(InputAction.CallbackContext context)

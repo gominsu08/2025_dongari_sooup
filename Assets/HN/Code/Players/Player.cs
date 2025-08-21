@@ -26,6 +26,7 @@ namespace HN.Code.Players
             _stateMachine = new EntityStateMachine(this);
             _stateMachine.AddState(PlayerState.IDLE.ToString(), new PlayerIdleState(_stateMachine, this));
             _stateMachine.AddState(PlayerState.MOVE.ToString(), new PlayerMoveState(_stateMachine, this));
+            _stateMachine.AddState(PlayerState.JUMP.ToString(), new PlayerJumpState(_stateMachine, this));
         }
 
         private void Start()
